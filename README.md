@@ -6,5 +6,5 @@ TeamStack is a web application where you can play any of the 3 roles: project ma
 <br>An investor can place offers on any project he is interested in. He can see the description of the project and the team working on it.</br>
 
 ## Technologies Used
-React, Node, MySQL, CSS
+React, Node, MySQL, Express
 
