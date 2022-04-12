@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import {Link} from 'react-router-dom'
 import background from './../assets/loginbackground.png';
+
 export const colors={
     primary: '#fff',
     theme:"BE185D"
@@ -34,3 +35,10 @@ export const StyledButton = styled(Link)`
         cursor:pointer
     }
 `
+;
+export const StyledFormArea = styled.div`
+    background-color: ${props => props.bg|| colors.light1};
+    text-align: center;
+    padding: 45px 55px;
+`
+;

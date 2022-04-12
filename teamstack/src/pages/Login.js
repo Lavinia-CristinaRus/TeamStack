@@ -1,10 +1,10 @@
 import logo from './../logo.svg';
 import {StyledButton} from "./../components/Styles";
+
 const Login = () => {
   return (  
-    <div className="Login">
       <div>
-      <div class="divlogo">
+      <div>
             <img src = {logo} alt = "logo" width="200" height="300"/>
         </div>
         <h1>Log In</h1>
@@ -21,15 +21,15 @@ const Login = () => {
                 <div>
                   <label for="pass">Password</label>
                 </div>
-                <div class="col2">
+                <div>
                   <input type="password" id="pass" name="pass" placeholder="Your password.."></input>
                 </div>
               </div>
                 <input type="submit" value="Log In"></input>
             </form>
-      </div>
+      
       <StyledButton to="/register">Register</StyledButton>
-    </div>
+      </div>
   );
 }
 
