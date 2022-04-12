@@ -1,10 +1,13 @@
 import logo from './../logo.svg';
+import {StyledButton} from "./../components/Styles";
+import  "./../components/Login.css";
 
 const Register = () => {
     return (
     <div className="Register">
-        <div class="divlogo">
-            <img src = {logo} alt = "logo"/>
+        <div class = "center">
+        <div>
+            <img src = {logo} alt = "logo" width="200" height="300"/>
         </div>
         <h1>Register</h1>
         <form action="/register" method="post">
@@ -61,9 +64,12 @@ const Register = () => {
                 </datalist>
                 </div>
             </div>
-            <input type="submit" value="Register"></input>
+            <input type="submit" value="Register" margin="20"></input>
         </form>
-
+        </div>
+        <StyledButton to="/">
+          Login
+        </StyledButton>
     </div>
     )
 }

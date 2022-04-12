@@ -18,8 +18,8 @@ export const StyledContainer = styled.div`
     background-attachment:fixed;
 `
 export const StyledButton = styled(Link)`
-    padding: 10px;
-    width: 150px;
+    padding: 100%;
+    width: 100%;
     background-color:transparent;
     font-size:16px;
     border:3px solid ${colors.primary};
