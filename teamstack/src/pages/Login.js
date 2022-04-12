@@ -1,11 +1,11 @@
 import logo from './../logo.svg';
-
-function Login() {
-  return (
+import {StyledButton} from "./../components/Styles";
+const Login = () => {
+  return (  
     <div className="Login">
       <div>
       <div class="divlogo">
-            <img src = {logo} alt = "logo"/>
+            <img src = {logo} alt = "logo" width="200" height="300"/>
         </div>
         <h1>Log In</h1>
         <form>
@@ -28,11 +28,7 @@ function Login() {
                 <input type="submit" value="Log In"></input>
             </form>
       </div>
-      <a href="javascript:setTimeout(()=>{window.location = '/register' },200);">
-          <div>
-              <h1 id = "register_text">Register</h1>
-          </div>
-      </a>
+      <StyledButton to="/register">Register</StyledButton>
     </div>
   );
 }

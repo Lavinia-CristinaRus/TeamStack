@@ -1,6 +1,6 @@
 import logo from './../logo.svg';
 
-function Register() {
+const Register = () => {
     return (
     <div className="Register">
         <div class="divlogo">
@@ -63,10 +63,9 @@ function Register() {
             </div>
             <input type="submit" value="Register"></input>
         </form>
-        <a href="javascript:setTimeout(()=>{window.location = 'login' },200);"></a>
-        <div>
-            <h1 id = "login_text">Log In</h1>
-        </div>
+
     </div>
     )
 }
+
+export default Register;
