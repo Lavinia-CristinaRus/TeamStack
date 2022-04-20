@@ -1,77 +1,71 @@
-import logo from './../logo.svg';
-import {StyledButton} from "./../components/Styles";
-import  "./../components/Login.css";
+import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom';
+import mail from "./../assets/email.png";
+import lock from "./../assets/lock.png";
+import profile from "./../assets/icon.jpg";
+import "./../components/App.css";
 
-const Register = () => {
+
+function Registration() {
+    
+    const LOCAL_STORAGE_KEY = "Info";
+
+    const [Info, setInfo] = useState({
+        name:"",
+        email:"",
+        password:"",
+        profession:""
+    });
+
+    useEffect(() => {
+        const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+        if (retriveContacts) setInfo(retriveContacts);
+    }, [])
+
+    useEffect(()=>{
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(Info))
+    },[Info])
+
+    let register = (e) =>{
+        e.preventDefault()
+
+        if (!Info.name || !Info.email || !Info.password || !Info.profession) {
+            alert("Complete all the fields!!!")
+            return
+        }
+    }
+
     return (
-    <div className="Register">
-        <div class = "center">
-        <div>
-            <img src = {logo} alt = "logo" width="200" height="300"/>
-        </div>
-        <h1>Register</h1>
-        <form action="/register" method="post">
-            <div>
-            <div>
-                <label for="fname">First Name</label>
-            </div>
-            <div>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name.."></input>
-            </div>
-            </div>
-            <div>
-            <div>
-                <label for="lname">Last Name</label>
-            </div>
-            <div>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.."></input>
-            </div>
-            </div>
-            <div>
-                <div>
-                <label for="email">Email Adress</label>
-                </div>
-                <div>
-                <input type="email" id="email" name="email" placeholder="Your email adress.."></input>
+        <form onSubmit={register}>
+            <div className='main'>
+                <div className='sub-main'>
+                    <div>
+                        <div>
+                            <h1 className='RHeader'>Registration</h1>
+                            <div>
+                                <img src={profile} alt="emial" className='email' />
+                                <input type="text" placeholder='Enter Name' className='fill' value={Info.name} onChange={(e) => setInfo({...Info, name: e.target.value})}/>
+                            </div>
+                            <div className='mail-id'>
+                                <img src={mail} alt="email" className='email' />
+                                <input type="email" placeholder='Enter Email-address' className='fill' value={Info.email} onChange={(e) => setInfo({...Info, email: e.target.value})}/>
+                            </div>
+                            <div className='mail-id'>
+                                <img src={lock} alt="password" className='email' />
+                                <input type="password" placeholder='Enter Password' className='fill' value={Info.password} onChange={(e) => setInfo({...Info, password: e.target.value})}/>
+                            </div>
+                            <div className='login-btn'>
+                                <button type="submit">Register</button>
+                            </div>
+                            <div className='reg-link'>
+                                <p>If Account exist then <Link className='link' to='/login'>Login!</Link></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div>
-                <label for="phone">Phone Number</label>
-                </div>
-                <div>
-                <input type="tel" id="phone" name="nr_telefon" placeholder="Your phone number.."></input>
-                </div>
-            </div>
-            <div>
-                <div>
-                <label for="pass">Password</label>
-                </div>
-                <div class="col2">
-                <input type="password" id="pass" name="pass" placeholder="Your password.."></input>
-                </div>
-            </div>
-            <div>
-                <div>
-                <label for="role">Role</label>
-                </div>
-                <div>
-                <input list="role_list" name="role" />
-                <datalist id="role_list">
-                    <option value="Project Manager"> </option>
-                    <option value="Developer"> </option>
-                    <option value="Investor"> </option>
-                </datalist>
-                </div>
-            </div>
-            <input type="submit" value="Register" margin="20"></input>
         </form>
-        </div>
-        <StyledButton to="/">
-          Login
-        </StyledButton>
-    </div>
     )
 }
 
-export default Register;
+export default Registration
