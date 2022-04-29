@@ -29,7 +29,7 @@ function Profiles() {
                         <div className="bar"></div>
                     </div>
                 </div>
-                <Tilt>
+                <Tilt style={{backgroundcolor:"transparent", padding:'30px'}}>
                     <div className="container">
                         <div className="profile-box">
                             <img src={menu} className="menu-icon"/>
