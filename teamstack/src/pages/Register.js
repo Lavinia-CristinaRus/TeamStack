@@ -14,7 +14,7 @@ function Registration() {
         name:"",
         email:"",
         password:"",
-        profession:""
+        role:""
     });
 
     useEffect(() => {
@@ -53,6 +53,16 @@ function Registration() {
                             <div className='mail-id'>
                                 <img src={lock} alt="password" className='email' />
                                 <input type="password" placeholder='Enter Password' className='fill' value={Info.password} onChange={(e) => setInfo({...Info, password: e.target.value})}/>
+                            </div>
+                            <div className="drop-down-menu">
+                                <label>
+                                    <div className="b">Pick your role:</div>
+                                    <select value={Info.role} onChange={(e) => setInfo({...Info, role: e.target.value})}>           
+                                        <option value="project manager">Project Manager</option>
+                                        <option value="investor">Investor</option>
+                                        <option value="developer">Developer</option>
+                                    </select>
+                                </label>
                             </div>
                             <div className='login-btn'>
                                 <button type="submit">Register</button>
