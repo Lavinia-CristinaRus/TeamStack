@@ -17,6 +17,7 @@ function Home() {
                     <span>Stack</span></span>
                     <div className={`nav-items ${isOpen && "open"}`}>
                         <Link to="/login">Login</Link>
+                        <Link to="/myprojects">My Projects</Link>
                     </div>
                     <div
                         className={`nav-toggle ${isOpen && "open"}`}

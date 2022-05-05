@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Registration from './pages/Register';
 import Profiles from './pages/Profiles';
+import MyProjects from './pages/MyProjects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
             <Route path="/login" element={<Login/>}/>
             <Route path="/registration" element={<Registration/>}/>
             <Route path="/profiles" element={<Profiles/>}/>
-            <Route path="/home" element={<Home/>} />
+            <Route path="/myprojects" element={<MyProjects/>}/>
           </Routes>
         </div>
       </React.Fragment>
