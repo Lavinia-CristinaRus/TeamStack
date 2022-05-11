@@ -6,7 +6,7 @@ const MyProjectsContent = () => {
     const listItems = MyProjectsData.map((item) =>
         <div className="card" key={item.id}>
             <div className="card_img">
-                <img src={require('./images/' + item.image +'.png')} />
+                {/*<img src={require('./images/' + item.image +'.png')} />*/}
             </div>
             <div className="card_header">
                 <h2>{item.project_name}</h2>

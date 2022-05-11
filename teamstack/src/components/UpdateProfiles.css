@@ -1,0 +1,118 @@
+.App {
+    text-align: center;
+  }
+  
+  .nav-links{
+    width:50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .link{
+    list-style: none;
+  }
+  
+  .main{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    justify-content: center;
+    display: flex;
+    padding: 90px 0px 90px 0;
+    box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+  }
+  
+  .sub-main{
+    display: flex;
+    justify-content: right;
+    height: 550px;
+    width: 60%;
+    padding-top:40px ;
+    padding-right:80px;
+    padding-left: 80px;
+    border-radius: 60px;
+  }
+
+  .upload_pic{
+    display: flex;
+    justify-content: left;
+    height: 550px;
+    width: 60%;
+    padding-left: 100px;
+    padding-top:30px;
+    border-radius: 60px;
+  }
+  
+  div.sub-main{
+    background-color: #ffffff;
+    opacity: 0.96;
+  }
+  
+  input{
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+  }
+
+  textarea{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+  }
+  
+  .imgs{
+    justify-content: center;
+    display: flex;
+  }
+  .container-image{
+    background-color: rgba(244,242,237,255);
+    border-radius: 100px;
+    align-items:center;
+    display: flex;
+    height: 115px;
+    width: 115px;  
+  }
+  
+  .profile{
+    height: 130px;
+    width: 130px;
+    border-radius: 100px;
+  }
+  
+  .LHeader{
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 10px;
+  }
+  
+  .fill{
+    padding-left: 30px;
+    font-size: 20px;
+  }
+  .second-input{
+    padding-top: 20px;
+  }
+  
+  button.bt{
+    width: 260px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: rgba(73,119,163,255);
+    color: white;
+    box-shadow: inset 0px 0px 15px 0px rgb(14, 14, 15);
+    font-size: 25px;
+    border: none;
+  }
+  
+  .bt{
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  button:hover {
+    background-color: rgb(122, 142, 233);
+  }
+
+  
