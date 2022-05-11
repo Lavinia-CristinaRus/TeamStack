@@ -12,6 +12,9 @@ function MyProjects() {
         <div className="under">
             <div className="over">
             <div className="Navbar">
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+                <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
                 <span className="nav-logo"><span>Team</span><br/>
                 <span>Stack</span></span>
                 <div className={`nav-items ${isOpen && "open"}`}>
