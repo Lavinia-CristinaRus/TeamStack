@@ -87,7 +87,7 @@
     height: 35px;
     font-size: 14px;
     border-radius: 35px;
-    background-color: #261600;
+    background-color: #18025d;
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     position: relative;
@@ -159,6 +159,7 @@
     cursor: pointer;
  }
   .btn {
+    margin-top:10px;
     width: 130px;
     height: 35px;
     font-size: 14px;
