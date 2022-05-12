@@ -1,0 +1,16 @@
+.main {
+    background-image: url("./../assets/background.jpg") !important;
+    background-size: 1250px;
+    background-position: 38px -30px;;
+}
+
+ .drop-down-menu {
+     padding-top:15px;
+ }
+
+ .b {
+     padding-bottom:10px;
+     font-weight:bold;
+     text-align:left;
+     margin-left:5px;
+ }

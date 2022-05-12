@@ -1,0 +1,95 @@
+  .nav-links{
+    width:50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .link{
+    list-style: none;
+  }
+  
+  .main-update{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 50px 0px 50px 0;
+    
+  }
+  
+  .sub-main-update{
+    display: flex;
+    justify-content: right;
+    height: 400px;
+    width: 50%;
+    padding-top:40px ;
+    padding-right:80px;
+    padding-left: 80px;
+    border-radius: 60px;
+  }
+
+  .upload_pic{
+    display: flex;
+    justify-content: left;
+    height: 550px;
+    width: 60%;
+    padding-left: 100px;
+    padding-top:30px;
+    border-radius: 60px;
+  }
+  
+  div.sub-main-update{
+    background-color: #ffffffcb;
+    opacity: 0.9;
+  }
+  
+  textarea{
+    width: 300px;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+  }
+  
+
+  .fil{
+    padding-left: 30px;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+  }
+
+  .des {
+    padding-left: 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+  }
+  .second-input{
+    padding-top: 20px;
+  }
+  
+  button.bt{
+    width: 260px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: rgba(73,119,163,255);
+    color: white;
+    box-shadow: inset 0px 0px 15px 0px rgb(14, 14, 15);
+    font-size: 25px;
+    border: none;
+  }
+  
+  .bt{
+    padding-top: 340px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    
+  }
+  button:hover {
+    background-color: rgb(122, 142, 233);
+  }
+
+  

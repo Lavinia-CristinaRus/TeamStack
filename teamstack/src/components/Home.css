@@ -1,0 +1,34 @@
+.under {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    background-image: url("./../assets/background.jpg") !important;
+    background-size: 1250px;
+    background-position: 38px -30px;;
+}
+
+.over {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    background: rgba(60, 52, 36, 0.644);
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    padding-top: 200px;
+    padding-bottom:50px;
+}
+
+.conversation-container > .header {
+    background-color: red;
+}
+
+.message > .response {
+    background-color: black;
+    color: white;
+}
