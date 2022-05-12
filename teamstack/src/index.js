@@ -7,8 +7,32 @@ const express = require('express');
 const session = require('express-session');
 const port = process.env.PORT || 3000;
 const cookieParser = require('cookie-parser');
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+const app = express();
+const cors = require("cors");
+const bodyParser = require("body-parser");
+
+app.use(express.json());
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(
+  session({
+    key: "soft",
+    secret: "sisters",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      expires: 60 * 60 * 24,
+    },
+  })
+);
 
 const connection = mysql.createConnection({
   host: 'localhost',
