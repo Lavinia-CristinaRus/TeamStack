@@ -41,13 +41,13 @@ function UpdateProfile() {
                         <button type="submit">Save Profile</button>
                     </div>
                     </div>
-                    <div>
+                    <div className='inputs'>
                             <br></br>
                             <div>
-                                <input placeholder='First Name' className='fil' onChange={(event) => setEmaillog(event.target.value) }/> 
+                                <input placeholder='Name' className='fil' onChange={(event) => setEmaillog(event.target.value) }/> 
                             </div>
                             <div className='second-input'>
-                                <input placeholder='Last Name' className='fil' onChange={(event) => setPasswordlog(event.target.value) }/>
+                                <input placeholder='Email Address' className='fil' onChange={(event) => setPasswordlog(event.target.value) }/>
                             </div>
                             <div className='second-input'>
                                 <input placeholder='Phone Number' className='fil' onChange={(event) => setPasswordlog(event.target.value) }/>

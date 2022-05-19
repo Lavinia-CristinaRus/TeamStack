@@ -30,13 +30,12 @@
   }
 
   .upload_pic{
-    display: flex;
-    justify-content: left;
     height: 550px;
     width: 60%;
-    padding-left: 100px;
+    padding-right:80px;
     padding-top:30px;
     border-radius: 60px;
+    margin-left:50px;
   }
   
   div.sub-main-update{
@@ -44,6 +43,7 @@
     opacity: 0.9;
   }
   
+
   textarea{
     width: 300px;
     height: 90px;
@@ -71,7 +71,7 @@
     padding-top: 20px;
   }
   
-  button.bt{
+  button{
     width: 260px;
     height: 50px;
     border-radius: 60px;
@@ -79,7 +79,10 @@
     color: white;
     box-shadow: inset 0px 0px 15px 0px rgb(14, 14, 15);
     font-size: 25px;
-    border: none;
+    border: none;  
+    position: fixed;
+    bottom: 15px;
+    right: 250px;
   }
   
   .bt{
