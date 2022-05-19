@@ -74,10 +74,25 @@ app.post("/register", (req, res) => {
   const password = req.body.password;
   const role = req.body.role;
     db.query(
-      "INSERT INTO users (email, name, password role) VALUES (?,?,?,?)",
+      "INSERT INTO users (email, name, password, role) VALUES (?,?,?,?)",
       [email, name, password, role],
       (err, result) => {
         res.send({ err: err });
+      }
+    );
+});
+
+app.post("/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+    db.query(
+      "SELECT * FROM users WHERE email=?",
+      email,
+      (err, result) => {
+        if(!result) {res.send({ err: err });}
+        else {
+          if(result[0].password != password) {if(!result) {res.send({ err: "Wrong password!" });}}
+        }
       }
     );
 });

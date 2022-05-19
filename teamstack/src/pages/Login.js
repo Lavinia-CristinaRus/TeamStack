@@ -11,6 +11,15 @@ function Login() {
     const [emaillog, setEmaillog] = useState(" ");
     const [passwordlog, setPasswordlog] = useState(" ");
 
+    const log = () => {
+        Axios.post("http://localhost:3000/login", {
+            email:emaillog,
+            password:passwordlog,
+        }).then((response) => {
+          console.log(response);
+        });
+    };
+
     return (
         <form>
             <div className='main'>
