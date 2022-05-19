@@ -6,6 +6,7 @@ import Registration from './pages/Register';
 import Profiles from './pages/Profiles';
 import MyProjects from './pages/MyProjects';
 import UpdateProfile from './pages/UpdateProfile';
+import AddNewProject from './pages/AddNewProject';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -19,7 +20,8 @@ const App = () => {
             <Route path="/registration" element={<Registration/>}/>
             <Route path="/profiles" element={<Profiles/>}/>
             <Route path="/myprojects" element={<MyProjects/>}/>
-            <Route path="/updateprofile" element={<UpdateProfile/>}/>
+            <Route path="/updateprofile" element={<UpdateProfile/>}/>\
+            <Route path="/addnewproject" element={<AddNewProject/>}/>
           </Routes>
         </div>
       </React.Fragment>
