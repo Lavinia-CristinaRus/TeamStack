@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 const express = require('express');
 const session = require('express-session');
-const port = process.env.PORT || 3000;
 const cookieParser = require('cookie-parser');
 const app = express();
 const cors = require("cors");
@@ -69,7 +68,23 @@ connection.query('SELECT 1');
 
 handleDisconnect();
 
+app.post("/register", (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const password = req.body.password;
+  const role = req.body.role;
+    db.query(
+      "INSERT INTO users (email, name, password role) VALUES (?,?,?,?)",
+      [email, name, password, role],
+      (err, result) => {
+        res.send({ err: err });
+      }
+    );
+});
 
+app.listen(3001, () => {
+  console.log("running server");
+})
 
 ReactDOM.render(
   <React.StrictMode>

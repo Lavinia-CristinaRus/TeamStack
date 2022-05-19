@@ -4,6 +4,7 @@ import mail from "./../assets/email.png";
 import lock from "./../assets/lock.png";
 import profile from "./../assets/icon.jpg";
 import "./../components/App.css";
+import Axios from "axios";
 
 
 function Registration() {
@@ -35,6 +36,17 @@ function Registration() {
         }
     }
 
+    const reg = () => {
+        Axios.post("http://localhost:3000/register", {
+            name:Info.name,
+            email:Info.email,
+            password:Info.password,
+            role:Info.role
+        }).then((response) => {
+          console.log(response);
+        });
+      };
+
     return (
         <form onSubmit={register}>
             <div className='main'>
@@ -65,7 +77,7 @@ function Registration() {
                                 </label>
                             </div>
                             <div className='login-btn'>
-                                <button type="submit">Register</button>
+                                <button type="submit" onClick = {reg}>Register</button>
                             </div>
                             <div className='reg-link'>
                                 <p>If Account exist then <Link className='link' to='/login'>Login!</Link></p>
