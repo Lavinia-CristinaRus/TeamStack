@@ -42,6 +42,7 @@ function Registration() {
                     <div>
                         <div>
                             <h1 className='RHeader'>Registration</h1>
+                            <br></br>
                             <div>
                                 <img src={profile} alt="emial" className='email' />
                                 <input type="text" placeholder='Enter Name' className='fill' value={Info.name} onChange={(e) => setInfo({...Info, name: e.target.value})}/>
@@ -65,7 +66,7 @@ function Registration() {
                                 </label>
                             </div>
                             <div className='login-btn'>
-                                <button type="submit">Register</button>
+                                <button type="submit" className='autentificationButton'>Register</button>
                             </div>
                             <div className='reg-link'>
                                 <p>If Account exist then <Link className='link' to='/login'>Login!</Link></p>

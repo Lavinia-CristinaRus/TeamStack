@@ -1,0 +1,88 @@
+.main_updateProject{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    justify-content: center;
+    display: flex;
+    padding: 90px 0px 90px 0;
+    margin-top:-30px;
+}
+
+.sub-main_updateProject{
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    width: 500px;
+    box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+    padding-top:30px ;
+    border-radius: 60px;
+    background-color: white;
+}
+
+
+.upload_pic{
+position:absolute
+}
+.fieldsProject{
+  top: 200px;
+  position:relative;
+}
+
+.updateProjectFill{
+padding-left: 70px;
+font-size: 18px;
+width: 300px;
+height: 30px;
+border-radius: 60px;
+box-shadow: inset 0px 0px 25px 0px #888;
+}
+
+.halfFill1{
+    margin-left:-200px;
+    padding-left: 70px;
+    font-size: 18px;
+    width: 100px;
+    height: 30px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+}
+
+.halfFill2{
+    margin-left:200px;
+    padding-left: 70px;
+    font-size: 18px;
+    width: 100px;
+    height: 30px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+}
+
+.textarea{
+padding-left: 70px;
+font-size: 20px;
+width: 300px;
+height: 50px;
+border-radius: 60px;
+box-shadow: inset 0px 0px 25px 0px #888;
+padding-top: 25px;
+margin-bottom: 20px;
+}
+
+.second-input{
+padding-top: 20px;
+}
+    
+.updateProjectButton{
+width: 260px;
+height: 50px;
+border-radius: 60px;
+background-color: rgba(73,119,163,255);
+color: white;
+box-shadow: inset 0px 0px 15px 0px rgb(14, 14, 15);
+font-size: 25px;
+border: none;
+}
+
+button:hover {
+background-color: rgb(122, 142, 233);
+}
+

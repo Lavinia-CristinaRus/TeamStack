@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import UploadPic from "./UploadPic";
-import "./../components/UpdateProfile.css";
+import "./../components/UpdateProject.css";
 
 
 function UpdateProfile() {
@@ -32,24 +32,30 @@ function UpdateProfile() {
             </div>
             <div className={`${isOpen && "hide"}`}>
         <form>
-            <div className='main_update'>
-                <div className='sub-main_update'>
+            <div className='main_updateProject'>
+                <div className='sub-main_updateProject'>
                     <div className="upload_pic">
                         <UploadPic/>
                     </div>
                     <div>
-                        <div className='fields'>
+                        <div className='fieldsProject'>
                             <div>
-                                <input placeholder='Full Name' className='updateFill' onChange={(event) => setNamelog(event.target.value) }/>
+                                <input placeholder='Project Name' className='updateProjectFill' onChange={(event) => setNamelog(event.target.value) }/>
                             </div>
                             <div className='second-input'>
-                                <input placeholder='Phone Number' className='updateFill' onChange={(event) => setPhonelog(event.target.value) }/>
+                                <input placeholder='Nessesary funds' className='updateProjectFill' onChange={(event) => setPhonelog(event.target.value) }/>
+                            </div>
+                            <div className='second-input'>
+                                <input placeholder='Number of Developers Nedeed' className='halfFill1' onChange={(event) => setPhonelog(event.target.value) }/>
+                            </div>
+                            <div className='second-input'>
+                                <input placeholder='Estimated time' className='halfFill2' onChange={(event) => setPhonelog(event.target.value) }/>
                             </div>
                             <div className='second-input'>
                                 <textarea placeholder='Description' className='textarea' onChange={(event) => setDescriptionlog(event.target.value) }/>
                             </div>
                             <div>
-                                <button type="submit" className='updateButton'>Save Profile</button>
+                                <button type="submit" className='updateProjectButton'>Save Project</button>
                             </div>
                         </div>
                     </div>

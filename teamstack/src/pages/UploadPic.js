@@ -17,17 +17,14 @@ export class UploadPic extends Component {
     const { profileImg} = this.state
 		return (
 			<div>
-				
 					<div className="img-holder">
 						<img src={profileImg} alt="" id="img" className="img" />
+            <div className="label">
+              <label className="image-upload" htmlFor="input">Upload</label>
+            </div>
 					</div>
 					<input type="file" accept="image/*" name="image-upload" id="input" onChange={this.imageHandler} />
-					<div className="label">
-                        <label className="image-upload" htmlFor="input">
-						Upload
-					</label>
-                    </div>
-			
+					
 			</div>
 		);
 	}

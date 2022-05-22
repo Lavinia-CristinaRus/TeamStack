@@ -1,5 +1,5 @@
 .img-holder{
-    margin: auto;
+
     width: 150px;
     height: 150px;
     border-radius: 5px;
@@ -9,25 +9,32 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
+  .img-holder:hover .image-upload {
+    background-color: transparent;
+    color: #d9d7d7;
+}
+
   #input[type="file"] {
       display: none;
   }
   .label{
     width: 100%;
-    margin-top: 1rem;
+    height:150px;
     display: flex;
     justify-content: center;
+    margin-top:-150px;
   }
  .image-upload{
-     color:#ff574a;
+     color: transparent;
+     text-shadow: 30 10 2px rgb(0, 0, 0);
      border: none;
      outline: none;
-     box-shadow: 0 5px 10px rgba(244,67,54,0.5);
-     padding:15px 60px;
+     background-color: transparent;
+     padding:50px 50px;
      cursor:pointer;
-     border-radius:30px;
-     margin-bottom: -50px;
      font-weight: 600;
      font-size: 16px;
  }
