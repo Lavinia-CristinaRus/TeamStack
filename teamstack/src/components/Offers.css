@@ -1,0 +1,220 @@
+
+.homeContent {
+    position: relative;
+    max-width: 800px;
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 0 0 0;
+    flex-wrap:wrap;
+    display:flex;
+    gap:1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .hide{
+    display:none;
+  }
+  
+  .homeContent .card {
+    flex-shrink: 0;
+    border-radius: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    margin-bottom: 50px;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .homeContent.card .card_img {
+    margin-top: 5vw;
+  }
+  
+  .homeContent .card .card_img img {
+    width: 150px;
+  }
+  
+  .homeContent .card .card_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: rgb(255, 255, 255);
+    margin: 25px 0;
+  }
+  
+  .homeContent .card .card_header h2 {
+    font-size: 25px;
+  }
+  
+  .homeContent .card .card_header p {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 8px 0;
+  }
+  
+  .homeContent .card .card_header .price {
+    font-size: 25px;
+    color: #f7e0c1;
+  }
+  
+  .homeContent .card .card_header .price span {
+    font-size: 15px;
+    vertical-align: top;
+  }
+  
+  .homeContent .card:hover {
+    background-color: transparent; 
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .homeContent .card:hover .btn {
+    background-color: #8ab4e1;
+    color: #fff;
+  }
+
+  .btn {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: #436d9a;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    overflow: hidden;
+  }
+
+
+  .filtered-content{
+    position: relative;
+    max-width: 800px;
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 0 0 0;
+  }
+
+  .categories{
+    flex-wrap:wrap;
+    margin: 0 auto;
+    padding-left:40px;
+    padding-right:20px;
+    background:  #ffffff99;
+    margin: 80px;
+    padding-top:-20px;
+    padding-bottom:20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+  }
+
+  .text{
+    font-weight:600;
+    font-size:40px;
+    text-align:left;
+    padding-left:40px;
+    padding-top:20px;
+    position:relative;
+    margin-right: 50px;
+    margin-bottom:-20px;
+  }
+  
+  .text:hover {
+    opacity: 1;
+  }
+  
+  .text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background: #ffffff;
+    transition: all 0.45s;
+  }
+  
+  .text:hover::before {
+    width: 100%;
+  }
+  .loadMore{
+    border:none;
+    outline:none;
+    width:100%;
+    padding: 16px 0;
+    margin-top: -60px;
+  }
+  .loadMoreBtn{
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: #436d9a;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .hero {
+    padding-top:20px;
+    height: 60px;
+    background-color: transparent;
+  }
+
+  .link_status {
+    float: center;
+    width: 200px;
+    text-decoration: none;
+    display: inline;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size:medium;
+    cursor: pointer;
+    color:#436d9a;
+    background-color:rgba(255, 255, 255, 0.5);
+    margin:20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    outline: 2px dashed #436d9a;
+  }
+
+
+/* scroll to top button */
+.top-btn-position {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+}
+
+.top-btn-style {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #436d9a;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.top-btn-style:hover {
+  animation: none;
+  background-color: rgb(255, 255, 255);
+  color: #436d9a;
+  border: 3px solid #fff;
+}

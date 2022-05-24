@@ -46,9 +46,9 @@ function UpdateProfile() {
                                 <input placeholder='Nessesary funds' className='updateProjectFill' onChange={(event) => setPhonelog(event.target.value) }/>
                             </div>
                             <div className='second-input'>
-                                <input placeholder='Number of Developers Nedeed' className='halfFill1' onChange={(event) => setPhonelog(event.target.value) }/>
+                                <input placeholder='Nr of Developers' className='halfFill1' onChange={(event) => setPhonelog(event.target.value) }/>
                             </div>
-                            <div className='second-input'>
+                            <div>
                                 <input placeholder='Estimated time' className='halfFill2' onChange={(event) => setPhonelog(event.target.value) }/>
                             </div>
                             <div className='second-input'>

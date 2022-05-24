@@ -7,6 +7,7 @@ import Profiles from './pages/Profiles';
 import MyProjects from './pages/MyProjects';
 import UpdateProfile from './pages/UpdateProfile';
 import UpdateProject from './pages/UpdateProject';
+import Offers from './pages/Offers';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/myprojects" element={<MyProjects/>}/>
             <Route path="/updateprofile" element={<UpdateProfile/>}/>
             <Route path="/updateproject" element={<UpdateProject/>}/>
+            <Route path="/offers" element={<Offers/>}/>
           </Routes>
         </div>
       </React.Fragment>
