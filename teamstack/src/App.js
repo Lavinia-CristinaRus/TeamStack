@@ -4,10 +4,13 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Registration from './pages/Register';
 import Profiles from './pages/Profiles';
-import MyProjects from './pages/MyProjects';
+import MyProjects from './pages/Manager/MyProjects';
 import UpdateProfile from './pages/UpdateProfile';
-import UpdateProject from './pages/UpdateProject';
-import Offers from './pages/Offers';
+import UpdateProject from './pages/Manager/Project/UpdateProject';
+import ProjectIdea from './pages/Manager/Project/ProjectIdea';
+import OurTeam from './pages/Manager/Project/OurTeam';
+import Offers from './pages/Manager/Project/Offers';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -16,6 +19,7 @@ const App = () => {
       <React.Fragment>
         <div className="App">
           <Routes>
+            <Route path="*" element={<> not found</>} />
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login/>}/>
             <Route path="/registration" element={<Registration/>}/>
@@ -24,6 +28,8 @@ const App = () => {
             <Route path="/updateprofile" element={<UpdateProfile/>}/>
             <Route path="/updateproject" element={<UpdateProject/>}/>
             <Route path="/offers" element={<Offers/>}/>
+            <Route path="/ourteam" element={<OurTeam/>}/>
+            <Route path="/projectidea" element={<ProjectIdea/>}/>
           </Routes>
         </div>
       </React.Fragment>

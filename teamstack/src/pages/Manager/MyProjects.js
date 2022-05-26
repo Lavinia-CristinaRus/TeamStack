@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import 'react-router-dom'
 import {Link} from 'react-router-dom';
-import '../components/Home.css';
-import "../components/Navbar.css";
+import './../../components/Home.css';
+import "./../../components/Navbar.css";
 import MyProjectsContent from "./MyProjectsContent.js";
-import '../components/MyProjects.css';
+import './../../components/MyProjects.css';
 
 function MyProjects() {
     const [isOpen, setIsOpen] = useState(false);

@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import 'react-router-dom'
 import {Link} from 'react-router-dom';
-import './../components/Home.css';
-import './../components/Offers.css';
-import './../components/Navbar.css';
-import './../components/SearchBar.css';
+import './../../../components/Home.css';
+import './../../../components/Offers.css';
+import './../../../components/Navbar.css';
+import './../../../components/SearchBar.css';
 import investors_data from './investors_data.js';
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "../../ScrollToTop";
+import Menu from "./../../Menu";
 import { AiOutlineSearch } from "react-icons/ai";
 
 function Offers() {
@@ -57,7 +58,7 @@ function Offers() {
         const Filtered = List.slice(0, visible).map((item) =>
             <div className="card" key={item.id}>
                 <div className="card_img">
-                    <img src={require('./../assets/' + item.image +'.png')} />
+                    <img src={require('./../../../assets/' + item.image +'.png')} />
                 </div>
                 <div className="card_header">
                     <h2>{item.investor_name}</h2>
@@ -81,7 +82,7 @@ function Offers() {
                     <AiOutlineSearch
                     style={{
                         position: 'absolute',
-                        top: '5px',
+                        top: '7px',
                         left: '8px',
                         width: '14px',
                       }}
@@ -99,6 +100,8 @@ function Offers() {
                         <div className="bar"></div>
                     </div>
                 </div>
+
+                <Menu/>
                 <div className={`${((isOpen ||searchTerm === "") && "hide" ) || (!isOpen && "homeContent")}`}>
                     {MapInvestors(Investors)}
                     <div className={`${(Investors.length!==0)?"loadMore":"hide"}`}>

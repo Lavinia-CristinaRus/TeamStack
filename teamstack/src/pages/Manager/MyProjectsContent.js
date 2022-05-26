@@ -1,16 +1,17 @@
 import React from 'react';
 import MyProjectsData from "./MyProjectsData";
+import {Link} from "react-router-dom";
 
 const MyProjectsContent = () => {
     console.log(MyProjectsData);
     const listItems = MyProjectsData.map((item) =>
         <div className="card" key={item.id}>
             <div className="card_img">
-                {<img src={require('./images/' + item.image +'.png')} />}
+                {<img src={require('./../images/' + item.image +'.png')} />}
             </div>
             <div className="card_header">
                 <h2>{item.project_name}</h2>
-                <div className="btn">View</div>
+                <Link to="/projectidea" style={{ textDecoration: 'none'}} className="btn">View</Link>
             </div>
         </div>
 

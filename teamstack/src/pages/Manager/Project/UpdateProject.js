@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import UploadPic from "./UploadPic";
-import "./../components/UpdateProject.css";
+import UploadPic from "./../../UploadPic";
+import "./../../../components/UpdateProject.css";
 
 
 function UpdateProfile() {
