@@ -9,6 +9,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const mysql = require("mysql");
 
 app.use(express.json());
 app.use(
@@ -73,7 +74,7 @@ app.post("/register", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const role = req.body.role;
-    db.query(
+    connection.query(
       "INSERT INTO users (email, name, password, role) VALUES (?,?,?,?)",
       [email, name, password, role],
       (err, result) => {
@@ -85,7 +86,7 @@ app.post("/register", (req, res) => {
 app.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
-    db.query(
+    connection.query(
       "SELECT * FROM users WHERE email=?",
       email,
       (err, result) => {
