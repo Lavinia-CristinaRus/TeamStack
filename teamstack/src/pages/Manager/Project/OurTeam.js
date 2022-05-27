@@ -77,8 +77,9 @@ function OurTeam() {
                     <input className="search" placeholder="Search" onChange={(event) => {const { target } = event; setTimeout(() => {setSearchTerm(target.value);}, 500)}}/>
                 </div>
                     <div className={`nav-items ${isOpen && "open"}`}>
-                        <Link to="/login">Login</Link>
-                        <Link to="/myprojects">My Projects</Link>
+                        <Link to ="/myprojects">My Projects</Link> 
+                        <Link to ="/profiles">My Profile</Link> 
+                        <Link to="/login">Logout</Link>
                     </div>
                     <div
                         className={`nav-toggle ${isOpen && "open"}`}

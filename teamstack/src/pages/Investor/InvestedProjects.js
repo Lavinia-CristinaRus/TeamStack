@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import 'react-router-dom'
 import {Link} from 'react-router-dom';
-import './../../../components/Home.css';
-import './../../../components/Offers.css';
-import './../../../components/Navbar.css';
-import './../../../components/SearchBar.css';
-import investors_data from './investors_data.js';
-import ScrollToTop from "../../ScrollToTop";
-import Menu from "./../../Menu";
+import './../../components/Home.css';
+import './../../components/Offers.css';
+import './../../components/Navbar.css';
+import './../../components/SearchBar.css';
+import ProjectsData from './ProjectsData.js';
+import ScrollToTop from "../ScrollToTop";
 import { AiOutlineSearch } from "react-icons/ai";
 
-function Offers() {
+function InvestedProjects() {
 
     const[items, setItems] =useState([]);
     const[visible, setVisible] = useState(3);
@@ -19,7 +18,7 @@ function Offers() {
         setVisible((prevValue) => prevValue + 3);
     };
     useEffect(() =>{
-        fetch({Investors})
+        fetch({Projects})
         .then((res) =>res.json())
         .then((data) => setItems(data));
     }, []);
@@ -31,15 +30,14 @@ function Offers() {
         });
       };
     
-    const pending = useRef(null);
-    const accepted = useRef(null);
-    const rejected = useRef(null); 
+    const myprojects = useRef(null);
+    const placedoffers = useRef(null);
 
     const [isOpen, setIsOpen] = useState(false);
     const [searchTerm,setSearchTerm]=useState("");
     
     function FilterByCategory(status) {
-        const Filtered = investors_data.filter((item) => {
+        const Filtered = ProjectsData.filter((item) => {
             if(item.status.toLowerCase()===status) {
                 return item;
             }
@@ -47,24 +45,23 @@ function Offers() {
         return Filtered;
     }
 
-    const Investors = investors_data.filter((item) => {
-        if(item.investor_name.toLowerCase().includes(searchTerm.toLowerCase())) {
+    const Projects = ProjectsData.filter((item) => {
+        if(item.project_name.toLowerCase().includes(searchTerm.toLowerCase())) {
             return item;
         }
     })
 
-    function MapInvestors(List) {
+    function MapProjects(List) {
         if(!List){List=[];}
         const Filtered = List.slice(0, visible).map((item) =>
             <div className="card" key={item.id}>
                 <div className="card_img">
-                    <Link to="/profiles">
-                        <img src={require('./../../../assets/' + item.image +'.png')}/>
+                    <Link to="/projectdetails">
+                        <img src={require('./../images/' + item.image +'.png')}/>
                     </Link>
                 </div>
                 <div className="card_header">
-                    <h2>{item.investor_name}</h2>
-                    <p className="price">{item.price}</p>
+                    <h2>{item.project_name}</h2>
                     <div className="btn">Accept offer</div>
                 </div>
             </div>
@@ -92,7 +89,7 @@ function Offers() {
                     <input className="search" placeholder="Search" onChange={(event) => {const { target } = event; setTimeout(() => {setSearchTerm(target.value);}, 500)}}/>
                 </div>
                     <div className={`nav-items ${isOpen && "open"}`}>
-                        <Link to ="/myprojects">My Projects</Link> 
+                        <Link to ="/viewprojects">View Projects</Link> 
                         <Link to ="/profiles">My Profile</Link> 
                         <Link to="/login">Logout</Link>
                     </div>
@@ -103,11 +100,9 @@ function Offers() {
                         <div className="bar"></div>
                     </div>
                 </div>
-
-                <Menu/>
                 <div className={`${((isOpen ||searchTerm === "") && "hide" ) || (!isOpen && "homeContent")}`}>
-                    {MapInvestors(Investors)}
-                    <div className={`${(Investors.length!==0)?"loadMore":"hide"}`}>
+                    {MapProjects(Projects)}
+                    <div className={`${(Projects.length!==0)?"loadMore":"hide"}`}>
                         <button className="loadMoreBtn" onClick={showMoreItems}>Load More</button>
                     </div>
 
@@ -116,39 +111,27 @@ function Offers() {
                 <ScrollToTop />
                 <div className="hero">
                     <ul>
-                    <li onClick={() => scrollToSection(pending)} className="link_status">
-                        Pending
+                    <li onClick={() => scrollToSection(myprojects)} className="link_status">
+                        My Projects
                     </li>
-                    <li onClick={() => scrollToSection(accepted)} className="link_status">
-                        Accepted
-                    </li>
-                    <li onClick={() => scrollToSection(rejected)} className="link_status">
-                        Rejected
+                    <li onClick={() => scrollToSection(placedoffers)} className="link_status">
+                        Placed Offers
                     </li>
                     </ul>
                 </div>
-                    <div ref={pending} className = "categories">
-                        <p className="text">Pending</p>
+                    <div ref={myprojects} className = "categories">
+                        <p className="text">My Projects</p>
                         <div className="homeContent">
-                            {MapInvestors(FilterByCategory("pending"))}
+                            {MapProjects(FilterByCategory("my"))}
                             <div className="loadMore">
                                 <button className="loadMoreBtn" onClick={showMoreItems}>Load More</button>
                             </div>
                         </div>   
                     </div>
-                    <div ref={accepted} className = "categories">
-                        <p className="text">Accepted</p>
+                    <div ref={placedoffers} className = "categories">
+                        <p className="text">Placed Offers</p>
                         <div className="homeContent">
-                            {MapInvestors(FilterByCategory("accepted"))}
-                            <div className="loadMore">
-                                <button className="loadMoreBtn" onClick={showMoreItems}>Load More</button>
-                            </div>
-                        </div>   
-                    </div>
-                    <div ref={rejected} className = "categories">
-                        <p className="text">Rejected</p>
-                        <div className="homeContent">
-                            {MapInvestors(FilterByCategory("rejected"))}
+                            {MapProjects(FilterByCategory("placed"))}
                             <div className="loadMore">
                                 <button className="loadMoreBtn" onClick={showMoreItems}>Load More</button>
                             </div>
@@ -161,4 +144,4 @@ function Offers() {
     )
 }
 
-export default Offers;
+export default InvestedProjects;

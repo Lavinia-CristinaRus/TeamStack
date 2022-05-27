@@ -1,7 +1,16 @@
 .App {
     text-align: center;
   }
-  
+  .autentificationContainer {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    
+    margin: auto;
+  }
   .nav-links{
     width:50%;
     display: flex;
@@ -29,8 +38,10 @@
     height: 550px;
     width: 500px;
     box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
-    padding-top:30px ;
+    padding-top:20px;
     border-radius: 60px;
+    flex-direction: column;
+    margin: auto;
   }
   
   div.sub-main{
@@ -59,7 +70,7 @@
   
   .LHeader{
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 0px;
     padding-top: 10px;
   }
   
@@ -81,15 +92,13 @@
     box-shadow: inset 0px 0px 25px 0px #888;
   }
   
-  .second-input{
-    padding-top: 20px;
-  }
 
   .login-btn{
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top:40px;
+    padding-bottom: 10px;
+
   }
- 
+
   .autentificationButton{
     width: 260px;
     height: 50px;
@@ -106,7 +115,7 @@
   }
   
   .reg-link{
-    padding-top: 10px;
+    margin-bottom: 5px;
   }
   
   .mail-id{
@@ -150,4 +159,8 @@
     margin-top:10px;
   }
   
+  .error{
+    margin:5px;
+    color:rgb(252, 110, 110);
+  }
   

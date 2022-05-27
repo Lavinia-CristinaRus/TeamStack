@@ -3,10 +3,10 @@ import 'react-router-dom'
 import {Link} from 'react-router-dom';
 import './../../components/Home.css';
 import "./../../components/Navbar.css";
-import MyProjectsContent from "./MyProjectsContent.js";
+import ProjectsContent from "./ProjectsContent.js";
 import './../../components/MyProjects.css';
 
-function MyProjects() {
+function ViewProjects() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="under">
@@ -18,7 +18,7 @@ function MyProjects() {
                 <span className="nav-logo"><span>Team</span><br/>
                 <span>Stack</span></span>
                 <div className={`nav-items ${isOpen && "open"}`}>
-                    <Link to ="/addnewproject">Add New Project</Link> 
+                    <Link to ="/investedprojects">Invested Projects</Link> 
                     <Link to ="/profiles">My Profile</Link> 
                     <Link to="/login">Logout</Link>
                     
@@ -31,7 +31,7 @@ function MyProjects() {
                 </div>
             </div>
             <div>
-                   <MyProjectsContent />
+                   <ProjectsContent />
                 </div>
             </div>
         </div>
@@ -39,4 +39,4 @@ function MyProjects() {
     )
 }
 
-export default MyProjects;
+export default ViewProjects;

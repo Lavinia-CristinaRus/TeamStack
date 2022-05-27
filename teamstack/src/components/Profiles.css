@@ -13,7 +13,7 @@
 
 .setting-icon{
     width: 25px;
-    position:absolute;
+    position:fixed;
     right: 40px;
     top:40px;
 }
@@ -49,8 +49,7 @@
 
  
  .tooltip{
-    position: absolute;
-    position:absolute;
+    position:fixed;
     right: -25px;
     top: -20px;
     background: rgb(255, 255, 255);
@@ -75,8 +74,8 @@
 }
 
  .updateProfileIcon{
+     position:fixed;
      margin: 0 20px;
-     display:flex;
      align-items: center;
      justify-content: center;
      cursor:pointer;
@@ -85,4 +84,54 @@
   .updateProfileIcon:hover .tooltip{
      opacity:1;
      pointer-events: auto;
+}
+
+
+/* Investor "invest" button in project details */
+
+.btnInvest {
+    margin: 30px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: #436d9a;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    overflow: hidden;
+    text-align:center;
+    
+  }
+
+  .btnInvest:hover{
+    background-color: white;
+    color: #436d9a;
+    transform: scale(1.1) perspective(1px);
+    transition: all 1s ease;
+  }
+  
+  
+.amountInvest {
+    margin: 30px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: #436d9a;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    overflow: hidden;
+    text-align:center;
+    
+  }
+
+  .amountInvest::placeholder{
+
+        color:white;
 }

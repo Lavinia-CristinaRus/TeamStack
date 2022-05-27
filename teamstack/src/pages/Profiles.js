@@ -18,7 +18,7 @@ function Profiles() {
                     <span className="nav-logo"><span>Team</span><br/>
                     <span>Stack</span></span>
                     <div className={`nav-items ${isOpen && "open"}`}>
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">Logout</Link>
                     </div>
                     <div
                         className={`nav-toggle ${isOpen && "open"}`}
@@ -35,9 +35,9 @@ function Profiles() {
                             </div>
                             <img src={profile} className="profile-pic"/>
                             <h3>Name</h3>
-                            <p>Web Developer</p>
+                            <p>Project Manager / Investor / Web Developer</p>
                             <div className="profile-bottom">
-                                <p>Learn More About My Profile</p>
+                                <p>Details About My Profile</p>
                             </div>
                         </div>
                   

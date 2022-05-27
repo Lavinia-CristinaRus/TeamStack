@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import './../../../components/Navbar.css';
-import "./../../../components/Profiles.css";
+import './../../components/Navbar.css';
+import "./../../components/Profiles.css";
 import {Link} from 'react-router-dom';
-import settings from "./../../../assets/setting.png"
-import profile from "./../../images/1.png"
+import profile from "./../images/1.png"
 import Tilt from 'react-vanilla-tilt';
-import Menu from "./../../Menu";
+import CurrencyInput from 'react-currency-input-field';
+import ViewTeam from "./ViewTeam";
 
-function ProjectIdea() {
+function ProjectDetails() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="under">
@@ -19,7 +19,7 @@ function ProjectIdea() {
                     <span className="nav-logo"><span>Team</span><br/>
                     <span>Stack</span></span>
                     <div className={`nav-items ${isOpen && "open"}`}>
-                        <Link to ="/myprojects">My Projects</Link> 
+                        <Link to ="/viewprojects">View Projects</Link> 
                         <Link to ="/profiles">My Profile</Link> 
                         <Link to="/login">Logout</Link>
                     </div>
@@ -30,22 +30,20 @@ function ProjectIdea() {
                         <div className="bar"></div>
                     </div>
                 </div>
-               
-                <Menu/>
+
+                <ViewTeam/>
                 <div>
-                <Tilt style={{position:'relative', margin:'110px', backgroundColor:'rgba(255,255,255,0.2)', padding:'30px', borderRadius: '20px'}}>
-                            <div className='updateProfileIcon'>
-                                <div className='tooltip'>Update Project</div>
-                                <Link to="/updateproject"><img src={settings} className="setting-icon"/></Link>
-                            </div>
+                <Tilt style={{position:'relative', margin:'80px', backgroundColor:'rgba(255,255,255,0.2)', paddingLeft:'30px', paddingRight:'30px', borderRadius: '20px'}}>
                             <img src={profile} className="profile-pic"/>
                             <h3>Project Name</h3>
                             <p>Best Project Ever</p>
                             <div className="profile-bottom">
                                 <p>Project Details</p>
                             </div>
-                        
+                           
                </Tilt>
+               <CurrencyInput suffix="€" defaultvalue={0} placeholder="Type in the amount" className='amountInvest' />
+               <button className="btnInvest">Invest</button>
                </div>
         </div>
 
@@ -54,4 +52,4 @@ function ProjectIdea() {
     )
 }
 
-export default ProjectIdea;
+export default ProjectDetails;
