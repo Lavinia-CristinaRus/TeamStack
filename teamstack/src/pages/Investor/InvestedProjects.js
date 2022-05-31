@@ -6,6 +6,7 @@ import './../../components/Offers.css';
 import './../../components/Navbar.css';
 import './../../components/SearchBar.css';
 import ProjectsData from './ProjectsData.js';
+import AnimatedPage from "../AnimatedPage";
 import ScrollToTop from "../ScrollToTop";
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -109,6 +110,7 @@ function InvestedProjects() {
                 </div>
                 <div className={`${((isOpen ||searchTerm !== "") && "hide" ) || (!isOpen && "filteredContent")}`} >
                 <ScrollToTop />
+                <AnimatedPage>
                 <div className="hero">
                     <ul>
                     <li onClick={() => scrollToSection(myprojects)} className="link_status">
@@ -137,6 +139,7 @@ function InvestedProjects() {
                             </div>
                         </div>   
                     </div>
+                    </AnimatedPage>
                 </div>
             </div>
         </div>

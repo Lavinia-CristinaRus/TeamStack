@@ -4,6 +4,7 @@ import Email from "./../assets/email.png";
 import lock from "./../assets/lock.png";
 import profile from "./../assets/logo.svg";
 import "./../components/Authentification.css";
+import video from "./../assets/video.mp4";
 
 
 function Login() {
@@ -54,7 +55,9 @@ function Login() {
 
 
     return (
-        <div>
+      <div className='mainVideo'>
+        <div className="overlay"></div>
+          <video src={video} autoPlay loop muted />
         
         <form onSubmit={handleSubmit}>
             <div className='main'>
@@ -65,7 +68,9 @@ function Login() {
 
             */}
                 <div className='sub-main'>
+                    
                     <div>
+                      
                         <div className='imgs'>
                             <div className='container-image'>
                                 <img src={profile} alt='profile' className='profile'/>

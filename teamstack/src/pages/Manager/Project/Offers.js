@@ -9,6 +9,7 @@ import investors_data from './investors_data.js';
 import ScrollToTop from "../../ScrollToTop";
 import Menu from "./../../Menu";
 import { AiOutlineSearch } from "react-icons/ai";
+import AnimatedPage from './../../AnimatedPage';
 
 function Offers() {
 
@@ -105,6 +106,7 @@ function Offers() {
                 </div>
 
                 <Menu/>
+                <AnimatedPage>
                 <div className={`${((isOpen ||searchTerm === "") && "hide" ) || (!isOpen && "homeContent")}`}>
                     {MapInvestors(Investors)}
                     <div className={`${(Investors.length!==0)?"loadMore":"hide"}`}>
@@ -155,6 +157,7 @@ function Offers() {
                         </div>   
                     </div>
                 </div>
+                </AnimatedPage>
             </div>
         </div>
 

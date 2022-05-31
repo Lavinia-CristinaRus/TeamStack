@@ -37,7 +37,7 @@
     justify-content: center;
     height: 550px;
     width: 500px;
-    box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+    box-shadow: 11px 12px 13px 12px rgba(207, 207, 207, 0.336);
     padding-top:20px;
     border-radius: 60px;
     flex-direction: column;
@@ -45,7 +45,7 @@
   }
   
   div.sub-main{
-    background-color: #ffffff;
+    background-color: #ffffff6f;
     opacity: 0.96;
   }
   

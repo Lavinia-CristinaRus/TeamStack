@@ -14,7 +14,7 @@ import Offers from './pages/Manager/Project/Offers';
 import ViewProjects from './pages/Investor/ViewProjects';
 import ProjectDetails from './pages/Investor/ProjectDetails';
 import InvestedProjects from './pages/Investor/InvestedProjects';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const App = () => {
   return (

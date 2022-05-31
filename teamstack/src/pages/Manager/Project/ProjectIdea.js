@@ -36,7 +36,7 @@ function ProjectIdea() {
                 <Tilt style={{position:'relative', margin:'110px', backgroundColor:'rgba(255,255,255,0.2)', padding:'30px', borderRadius: '20px'}}>
                             <div className='updateProfileIcon'>
                                 <div className='tooltip'>Update Project</div>
-                                <Link to="/updateproject"><img src={settings} className="setting-icon"/></Link>
+                                <Link to="/updateproject"><img src={settings} className="setting-icon2"/></Link>
                             </div>
                             <img src={profile} className="profile-pic"/>
                             <h3>Project Name</h3>

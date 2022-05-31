@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import UploadPic from "./../UploadPic";
+import UploadPic from "../UploadPicProject";
 import "./../../components/UpdateProject.css";
+import AnimatedPage from '../AnimatedPage';
 
 
 function AddNewProject() {
@@ -9,8 +10,8 @@ function AddNewProject() {
     const [namelog, setNamelog] = useState(" ");
     const [phonelog, setPhonelog] = useState(" ");
     const [descriptionlog, setDescriptionlog] = useState(" ");
-
     return (
+        
         <div className="under">
         <div className="over">
             <div className="Navbar">
@@ -31,6 +32,7 @@ function AddNewProject() {
                 </div>
             </div>
             <div className={`${isOpen && "hide"}`}>
+    <AnimatedPage>
         <form>
             <div className='main_updateProject'>
                 <div className='sub-main_updateProject'>
@@ -62,6 +64,7 @@ function AddNewProject() {
                 </div>
             </div>
         </form>
+        </AnimatedPage>
         </div>
     </div>
     </div>

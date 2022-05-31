@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import UploadPic from "./UploadPic";
+import UploadPic from "./UploadPicProfile";
 import "./../components/UpdateProfile.css";
+import AnimatedPage from './AnimatedPage';
 
 
 function UpdateProfile() {
@@ -31,6 +32,7 @@ function UpdateProfile() {
                 </div>
             </div>
             <div className={`${isOpen && "hide"}`}>
+    <AnimatedPage>
         <form>
             <div className='main_update'>
                 <div className='sub-main_update'>
@@ -56,6 +58,7 @@ function UpdateProfile() {
                 </div>
             </div>
         </form>
+    </AnimatedPage>
         </div>
     </div>
     </div>

@@ -124,3 +124,108 @@
   
   }
   
+
+
+
+  .curved-div {
+    background: #436d9a;
+    color: #FFF;
+    text-align: center;
+    height:300px;
+    margin-top:-60px;
+    margin-bottom:170px;
+
+  }
+
+  .curved-div svg {
+    display: block;
+    margin-top:-100px;
+  }
+
+.animatedSVG{
+  width: 25%;
+  top:80px;
+  left:930px;
+  position:relative;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  
+}
+
+.home-intro{
+  text-align: left;
+  position:absolute;
+  width:50%;
+  flex-direction:column;
+  margin-top:150px;
+  margin-left:150px;
+  font-size:20px;
+  color:white;
+}
+
+.title{
+  animation-name:moveRight;
+  animation-duration: 0.7s;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.titleTwo{
+  animation-name:moveLeft;
+  animation-duration: 1s;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.titleThree{
+  animation-name:moveRight;
+  animation-duration: 1.3s;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+
+.titleFour{
+  animation-name:moveLeft;
+  animation-duration: 1.6s;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@keyframes moveRight{
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+@keyframes moveLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}

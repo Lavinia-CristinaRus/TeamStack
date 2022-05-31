@@ -5,11 +5,20 @@ import './../../components/Home.css';
 import "./../../components/Navbar.css";
 import MyProjectsContent from "./MyProjectsContent.js";
 import './../../components/MyProjects.css';
+import { ReactComponent as AnimatedSVG } from "./../../assets/in-the-office-animate.svg";
+import AnimatedPage from "../AnimatedPage";
+import ScrollToTop from "../ScrollToTop";
 
 function MyProjects() {
     const [isOpen, setIsOpen] = useState(false);
+    const [state] = useState({
+        title:"Attract Investors all over the World,",
+        titleTwo:"For Bigger and Better Projects",
+        titleThree:"Grow your Team",
+        titleFour:"Make your Dreams come True",
+    });
     return (
-        <div className="under">
+        <div className="under" style ={{height:"1150px"}}>
             <div className="over">
             <div className="Navbar">
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -31,7 +40,27 @@ function MyProjects() {
                 </div>
             </div>
             <div>
-                   <MyProjectsContent />
+            
+            <div className="curved-div">
+                <div className="home-intro">
+                    <h2>
+                        <div className="title">{state.title}</div>
+                        <div className="titleTwo">{state.titleTwo}</div>
+                        <div className="titleThree">{state.titleThree}</div>
+                        <div className="titleFour">{state.titleFour}</div>
+                    </h2>
+                        
+                </div>
+                <div className="animatedSVG">
+                    <AnimatedSVG />
+                </div>
+           {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,224C384,213,480,139,576,106.7C672,75,768,85,864,74.7C960,64,1056,32,1152,16C1248,0,1344,0,1392,0L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>*/}
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#436d9a" fill-opacity="1" d="M0,288L48,261.3C96,235,192,181,288,170.7C384,160,480,192,576,186.7C672,181,768,139,864,149.3C960,160,1056,224,1152,224C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            </div>
+            <ScrollToTop/>
+                   <AnimatedPage>
+                        <MyProjectsContent/>
+                   </AnimatedPage>
                 </div>
             </div>
         </div>

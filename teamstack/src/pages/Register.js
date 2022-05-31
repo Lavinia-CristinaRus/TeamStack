@@ -4,7 +4,7 @@ import mail from "./../assets/email.png";
 import lock from "./../assets/lock.png";
 import profile from "./../assets/icon.jpg";
 import "./../components/App.css";
-
+import video from "./../assets/video.mp4";
 
 function Registration() {
     
@@ -79,6 +79,10 @@ function Registration() {
   };
 
     return (
+      <div className='mainVideo'>
+        <div className="overlay"></div>
+          <video src={video} autoPlay loop muted />
+
         <form onSubmit={handleSubmit}>
             <div className='main'>
                 <div className='sub-main'>
@@ -126,6 +130,7 @@ function Registration() {
                 </div>
             </div>
         </form>
+      </div>
     )
 }
 

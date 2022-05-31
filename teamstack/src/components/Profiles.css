@@ -11,12 +11,23 @@
     backdrop-filter:blur(5px);
 }
 
+/*profiles*/
 .setting-icon{
     width: 25px;
     position:fixed;
-    right: 40px;
+    right: 42px;
     top:40px;
 }
+
+/*project idea*/
+.setting-icon2{
+    width: 25px;
+    position:relative;
+    left:1060px;
+    top:10px;
+}
+
+
 .profile-pic{
     width: 150px;
     border-radius: 50%;

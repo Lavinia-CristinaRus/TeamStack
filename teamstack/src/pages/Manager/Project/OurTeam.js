@@ -9,6 +9,8 @@ import ourteam_data from './ourteam_data.js';
 import ScrollToTop from "./../../ScrollToTop";
 import Menu from "./../../Menu";
 import { AiOutlineSearch } from "react-icons/ai";
+import AnimatedPage from './../../AnimatedPage';
+
 
 function OurTeam() {
 
@@ -89,6 +91,7 @@ function OurTeam() {
                 </div>
                 
                 <Menu/>
+                <AnimatedPage>
                 <div className="filteredcontentTeam">
                     <ScrollToTop />
                         <div className="containerTeam">
@@ -101,6 +104,7 @@ function OurTeam() {
                             </div>
                         </div>
                 </div>
+                </AnimatedPage>
             </div>
         </div>
 
