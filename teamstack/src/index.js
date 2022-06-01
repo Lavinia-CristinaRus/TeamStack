@@ -8,7 +8,6 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const app = express();
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const mysql = require("mysql");
 
 app.use(express.json());
@@ -20,7 +19,6 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   session({
