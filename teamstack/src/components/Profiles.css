@@ -1,10 +1,3 @@
-.container{
-    position: absolute; 
-    display: center;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .profile-box{
     text-align: center;
@@ -17,39 +10,41 @@
     box-shadow: 0 4px 30px rgba(0,0,0,0.1);
     backdrop-filter:blur(5px);
 }
-.menu-icon{
-    width: 25px;
-    position:absolute;
-    left: 40px;
-    top:40px;
-}
+
+/*profiles*/
 .setting-icon{
     width: 25px;
-    position:absolute;
-    right: 40px;
+    position:fixed;
+    right: 42px;
     top:40px;
 }
+
+/*project idea*/
+.setting-icon2{
+    width: 25px;
+    position:relative;
+    left:1060px;
+    top:10px;
+}
+
+
 .profile-pic{
     width: 150px;
     border-radius: 50%;
     padding: 6px;
-    margin-top:40px;
+    margin-top:10px;
 }
 .profile-bottom{
     background: rgba(251, 249, 249, 0.356);
     color:rgb(255, 255, 255);
-    padding: 60px 0;
-    margin-right: -90px;
-    margin-left: -90px;
+    padding: 60px 60px;
+    margin-right: -30px;
+    margin-left: -30px;
     margin-bottom: -40px;
     border-radius: 20px;
     margin-top: -10px;
 }
-.profile-bottom img{
-    width: 15px;
-    margin-top:15px;
-    cursor: pointer;
-}
+
  .profile-box button{
      color:#ff574a;
      border: none;
@@ -62,3 +57,92 @@
      font-weight: 600;
      font-size: 16px;
  }
+
+ 
+ .tooltip{
+    position:fixed;
+    right: -25px;
+    top: -20px;
+    background: rgb(255, 255, 255);
+    color:#436d9a;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    opacity:0;
+    pointer-events: none;
+}
+
+.tooltip::before{
+    position:absolute;
+    content:"";
+    height:15px;
+    width:15px;
+    background:rgb(255, 255, 255);
+    bottom: -8px;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+ .updateProfileIcon{
+     position:fixed;
+     margin: 0 20px;
+     align-items: center;
+     justify-content: center;
+     cursor:pointer;
+ }
+
+  .updateProfileIcon:hover .tooltip{
+     opacity:1;
+     pointer-events: auto;
+}
+
+
+/* Investor "invest" button in project details */
+
+.btnInvest {
+    margin: 30px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: #436d9a;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    overflow: hidden;
+    text-align:center;
+    
+  }
+
+  .btnInvest:hover{
+    background-color: white;
+    color: #436d9a;
+    transform: scale(1.1) perspective(1px);
+    transition: all 1s ease;
+  }
+  
+  
+.amountInvest {
+    margin: 30px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 35px;
+    background-color: #436d9a;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    overflow: hidden;
+    text-align:center;
+    
+  }
+
+  .amountInvest::placeholder{
+
+        color:white;
+}

@@ -2,10 +2,8 @@ import React, {useState} from 'react';
 import './../components/Navbar.css';
 import "./../components/Profiles.css";
 import {Link} from 'react-router-dom';
-import menu from "./../assets/menu.png";
 import settings from "./../assets/setting.png"
 import profile from "./../assets/profile-pic.png"
-import arrow from "./../assets/arrow.png"
 import Tilt from 'react-vanilla-tilt'
 
 function Profiles() {
@@ -20,7 +18,7 @@ function Profiles() {
                     <span className="nav-logo"><span>Team</span><br/>
                     <span>Stack</span></span>
                     <div className={`nav-items ${isOpen && "open"}`}>
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">Logout</Link>
                     </div>
                     <div
                         className={`nav-toggle ${isOpen && "open"}`}
@@ -30,20 +28,19 @@ function Profiles() {
                     </div>
                 </div>
                 <Tilt style={{backgroundcolor:"transparent", padding:'30px'}}>
-                    <div className="container">
                         <div className="profile-box">
-                            <img src={menu} className="menu-icon"/>
-                            <img src={settings} className="setting-icon"/>
+                            <div className='updateProfileIcon'>
+                                <div className='tooltip'>Update Profile</div>
+                                <Link to="/updateprofile"><img src={settings} className="setting-icon"/></Link>
+                            </div>
                             <img src={profile} className="profile-pic"/>
                             <h3>Name</h3>
-                            <p>Web Developer</p>
-                            <button type="button">Add</button>
+                            <p>Project Manager / Investor / Web Developer</p>
                             <div className="profile-bottom">
-                                <p>Learn More About My Profile</p>
-                                <img src={arrow} />
+                                <p>Details About My Profile</p>
                             </div>
                         </div>
-                    </div>
+                  
                </Tilt>
         </div>
 

@@ -3,10 +3,14 @@ import 'react-router-dom'
 import {Link} from 'react-router-dom';
 import './../components/Home.css';
 import './../components/Navbar.css';
+import AnimatedPage from "./AnimatedPage";
+
 
 function Home() {
     const [isOpen, setIsOpen] = useState(false);
+
     return (
+        
         <div className="under">
             <div className="over">
                 <div className="Navbar">
@@ -17,7 +21,6 @@ function Home() {
                     <span>Stack</span></span>
                     <div className={`nav-items ${isOpen && "open"}`}>
                         <Link to="/login">Login</Link>
-                        <Link to="/myprojects">My Projects</Link>
                     </div>
                     <div
                         className={`nav-toggle ${isOpen && "open"}`}
@@ -26,11 +29,12 @@ function Home() {
                         <div className="bar"></div>
                     </div>
                 </div>
-                <h1>Hello Welcome!!! </h1>
-                <h2><Link className='link' to='/login'>Log in</Link> if you already have an account, or <Link className='link' to='/registration'>register</Link> to get started</h2>
+                <AnimatedPage>
+                <h2><Link className='link' to='/myprojects'>Manager's side</Link> or <Link className='link' to='/viewprojects'>Investor's side</Link></h2>
+                </AnimatedPage>
             </div>
         </div>
-
+        
     )
 }
 
