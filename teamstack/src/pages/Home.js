@@ -30,7 +30,7 @@ function Home() {
                     </div>
                 </div>
                 <AnimatedPage>
-                <h2><Link className='link' to='/myprojects'>Manager's side</Link> or <Link className='link' to='/viewprojects'>Investor's side</Link></h2>
+                <h2><Link className='link' to='/myprojects'>Manager's side</Link> or <Link className='link' to='/viewprojects'>Investor's side</Link> or <Link className='link' to='/devprojects'>Developer's side</Link></h2>
                 </AnimatedPage>
             </div>
         </div>

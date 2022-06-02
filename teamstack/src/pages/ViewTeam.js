@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Link} from "react-router-dom";
-import "./../../components/Menu.css";
+import "./../components/Menu.css";
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 function ViewTeam({ selected, setSelected }) {

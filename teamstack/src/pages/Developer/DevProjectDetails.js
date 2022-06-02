@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import './../components/Navbar.css';
-import "./../components/Profiles.css";
+import './../../components/Navbar.css';
+import "./../../components/Profiles.css";
 import {Link} from 'react-router-dom';
-import settings from "./../assets/setting.png"
-import profile from "./../assets/profile-pic.png"
-import Tilt from 'react-vanilla-tilt'
-import AnimatedPage from './AnimatedPage';
+import profile from "./../images/1.png"
+import Tilt from 'react-vanilla-tilt';
+import ViewTeam from '../ViewTeam';
+import AnimatedPage from '../AnimatedPage';
 
-function Profiles() {
+function DevProjectDetails() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="under">
@@ -19,6 +19,8 @@ function Profiles() {
                     <span className="nav-logo"><span>Team</span><br/>
                     <span>Stack</span></span>
                     <div className={`nav-items ${isOpen && "open"}`}>
+                        <Link to ="/devprojects">View Projects</Link> 
+                        <Link to ="/profiles">My Profile</Link> 
                         <Link to="/login">Logout</Link>
                     </div>
                     <div
@@ -28,22 +30,19 @@ function Profiles() {
                         <div className="bar"></div>
                     </div>
                 </div>
+
+                <ViewTeam/>
                 <AnimatedPage>
-                <Tilt style={{backgroundcolor:"transparent", padding:'30px'}}>
-                        <div className="profile-box">
-                            <div className='updateProfileIcon'>
-                                <div className='tooltip'>Update Profile</div>
-                                <Link to="/updateprofile"><img src={settings} className="setting-icon"/></Link>
-                            </div>
+                <Tilt style={{position:'relative', margin:'80px', backgroundColor:'rgba(255,255,255,0.2)', paddingLeft:'30px', paddingRight:'30px', borderRadius: '20px'}}>
                             <img src={profile} className="profile-pic"/>
-                            <h3>John</h3>
-                            <p>Project Manager / Investor / Web Developer</p>
+                            <h3>Project Name</h3>
+                            <p>Best Project Ever</p>
                             <div className="profile-bottom">
-                                <p>Details About My Profile</p>
+                                <p>Project Details</p>
                             </div>
-                        </div>
-                  
+                           
                </Tilt>
+               <button className="btnInvest">Apply</button>
                </AnimatedPage>
         </div>
 
@@ -52,4 +51,4 @@ function Profiles() {
     )
 }
 
-export default Profiles;
+export default DevProjectDetails;

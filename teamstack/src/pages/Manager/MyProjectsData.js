@@ -12,7 +12,7 @@ const MyProjectsData = [
     {
         id: 3,
         project_name: "Project Name",
-        image: "1"
+        image: "3"
     },
     {
         id: 1,

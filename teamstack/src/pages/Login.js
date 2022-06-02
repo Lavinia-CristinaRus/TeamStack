@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Email from "./../assets/email.png";
 import lock from "./../assets/lock.png";
 import profile from "./../assets/logo.svg";
@@ -9,7 +9,7 @@ import video from "./../assets/video.mp4";
 
 function Login() {
 
-
+  const navigate = useNavigate();
     const [emaillog, setEmaillog] = useState(" ");
     const [passwordlog, setPasswordlog] = useState(" ");
 
@@ -26,6 +26,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    if(formValues.email === "pop@gmail.com" && formValues.password!=""){navigate("/myprojects")}else if(formValues.email === "ioan@gmail.com" && formValues.password!=""){navigate("/viewprojects")}else if(formValues.email !== "" && formValues.password!=""){navigate("/devprojects")}
     setIsSubmit(true);
   };
 
@@ -92,7 +93,7 @@ function Login() {
                           
                           <div className='footer'>
                             <div className='login-btn'>
-                                <button type="submit" className='autentificationButton'>Login</button>
+                            <button type="submit" className='autentificationButton' onClick={()=>{handleSubmit()}}>Login</button>
                             </div>
                             <div className='reg-link'>
                                 <p>Don't have an account? <Link className='link' to='/registration'>Register Now</Link></p>

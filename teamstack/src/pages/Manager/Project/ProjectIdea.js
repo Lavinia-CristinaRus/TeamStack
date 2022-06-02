@@ -39,10 +39,10 @@ function ProjectIdea() {
                                 <Link to="/updateproject"><img src={settings} className="setting-icon2"/></Link>
                             </div>
                             <img src={profile} className="profile-pic"/>
-                            <h3>Project Name</h3>
-                            <p>Best Project Ever</p>
+                            <h3>Emergency Ambulance Booking</h3>
+                            <p>Android App</p>
                             <div className="profile-bottom">
-                                <p>Project Details</p>
+                                <p>The system proposed here will help the users book an ambulance easily in an instant. The user will have to select the ambulance size, pick-up point & hospital. In case of emergency, the user will have to just select the pick-up point & destination and the system will automatically book the nearest ambulance and hospital. Once booked the ambulance operator will receive a notification for confirmation of the booking. The Ambulance driver can view the pick-up and drop location on Goggle Maps. The users will receive the contact details of the driver. The Hospitals can also view the booking history. This is how this Ambulance Booking App will act as a life savior in times of medical emergency.</p>
                             </div>
                         
                </Tilt>

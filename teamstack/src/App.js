@@ -14,6 +14,9 @@ import Offers from './pages/Manager/Project/Offers';
 import ViewProjects from './pages/Investor/ViewProjects';
 import ProjectDetails from './pages/Investor/ProjectDetails';
 import InvestedProjects from './pages/Investor/InvestedProjects';
+import DevProjects from './pages/Developer/DevProjects';
+import DevProjectDetails from './pages/Developer/DevProjectDetails';
+import DevTeamsProjects from './pages/Developer/DevTeamsProjects';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const App = () => {
@@ -39,6 +42,10 @@ const App = () => {
             <Route path="/viewprojects" element={<ViewProjects/>}/>
             <Route path="/projectdetails" element={<ProjectDetails/>}/>
             <Route path="/investedprojects" element={<InvestedProjects/>}/>
+            {/*  Developer */}
+            <Route path="/devprojects" element={<DevProjects/>}/>
+            <Route path="/devprojectdetails" element={<DevProjectDetails/>}/>
+            <Route path="/devteamsprojects" element={<DevTeamsProjects/>}/>
           </Routes>
         </div>
       </React.Fragment>

@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom';
 import profile from "./../images/1.png"
 import Tilt from 'react-vanilla-tilt';
 import CurrencyInput from 'react-currency-input-field';
-import ViewTeam from "./ViewTeam";
+import ViewTeam from '../ViewTeam';
+import AnimatedPage from '../AnimatedPage';
 
 function ProjectDetails() {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ function ProjectDetails() {
                 </div>
 
                 <ViewTeam/>
-                <div>
+                <AnimatedPage>
                 <Tilt style={{position:'relative', margin:'80px', backgroundColor:'rgba(255,255,255,0.2)', paddingLeft:'30px', paddingRight:'30px', borderRadius: '20px'}}>
                             <img src={profile} className="profile-pic"/>
                             <h3>Project Name</h3>
@@ -44,7 +45,7 @@ function ProjectDetails() {
                </Tilt>
                <CurrencyInput suffix="€" defaultvalue={0} placeholder="Type in the amount" className='amountInvest' />
                <button className="btnInvest">Invest</button>
-               </div>
+               </AnimatedPage>
         </div>
 
     </div>
